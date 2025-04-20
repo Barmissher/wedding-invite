@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Gausha & Akbaww</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-toggle" onclick="toggleMusic()">Pause Music</button>
+
+  <div class="background-overlay"></div>
+
+  <section class="hero" data-aos="fade-in">
+    <h1 class="couple-name">Gausha & Akbaww</h1>
+    <p class="date">20 Mei 2025</p>
+    <p id="guest-name" class="guest-name">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <button onclick="scrollToSection('invitation')">Lihat Undangan</button>
+  </section>
+
+  <section id="countdown" data-aos="fade-up">
+    <h2>Menuju Hari Bahagia</h2>
+    <div id="timer">Loading...</div>
+  </section>
+
+  <section id="invitation" data-aos="fade-up">
+    <h2>Undangan Pernikahan</h2>
+    <p>Dengan hormat kami mengundang Anda ke acara pernikahan kami.</p>
+    <p><strong>Akad:</strong> 20 Mei 2025, 09.00 WIB</p>
+    <p><strong>Resepsi:</strong> 20 Mei 2025, 13.00 WIB</p>
+  </section>
+
+  <section id="gallery" data-aos="fade-up">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="assets/photo1.jpg" />
+      <img src="assets/photo2.jpg" />
+      <img src="assets/photo3.jpg" />
+    </div>
+  </section>
+
+  <section id="rsvp" data-aos="fade-up">
+    <h2>Konfirmasi Kehadiran</h2>
+    <form id="rsvp-form">
+      <input type="text" name="nama" placeholder="Nama Anda" required />
+      <select name="kehadiran">
+        <option value="hadir">Hadir</option>
+        <option value="tidak">Tidak Hadir</option>
+      </select>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <section id="location" data-aos="fade-up">
+    <h2>Lokasi Acara</h2>
+    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" allowfullscreen></iframe>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

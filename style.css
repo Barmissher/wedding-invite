@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #333;
+  position: relative;
+}
+
+.background-overlay {
+  background: url('assets/flower-bg.png') repeat;
+  opacity: 0.2;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, #f0f0ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  padding: 20px;
+}
+
+.couple-name {
+  font-size: 3em;
+  margin: 0.2em 0;
+}
+
+.date {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#guest-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+form input, form select, form button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+#music-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
