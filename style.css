@@ -1,82 +1,111 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
-  background: #fff;
-  color: #333;
+  padding: 0;
+  background-color: #f5f5f5;
   position: relative;
+  overflow: hidden;
 }
 
-.background-overlay {
-  background: url('assets/33dba7e4-01fe-4caf-95b1-0975676f0762.png') repeat;
-  opacity: 0.2;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
+/* Style untuk bunga yang bergerak */
+.flower {
+  position: absolute;
+  background-image: url('assets/flower.png'); /* Ganti dengan path gambar bunga yang kamu punya */
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  animation: moveFlower 10s infinite linear;
 }
 
+.flower1 {
+  left: 0;
+  bottom: 0;
+}
+
+.flower2 {
+  right: 0;
+  top: 0;
+}
+
+@keyframes moveFlower {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, -100px); /* Bisa disesuaikan untuk gerakan */
+  }
+  50% {
+    transform: translate(200px, 0);
+  }
+  75% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Bagian Hero */
 .hero {
-  height: 100vh;
-  background: linear-gradient(to bottom, #f0f0ff, #ffffff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  font-family: 'Great Vibes', cursive;
-  padding: 20px;
+  padding: 100px 0;
+  background-color: #ffcc00;
+  color: #333;
 }
 
 .couple-name {
-  font-size: 3em;
-  margin: 0.2em 0;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .date {
-  font-size: 1.2em;
-  margin-bottom: 1em;
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
-#guest-name {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  margin-bottom: 2em;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+.hidden {
+  display: none;
 }
 
 section {
-  padding: 60px 20px;
+  padding: 50px;
   text-align: center;
 }
 
-.gallery {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.gallery img {
-  width: 200px;
-  height: auto;
+.gallery-images img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  object-fit: cover;
 }
 
-form input, form select, form button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 300px;
+#invitation, #gallery, #rsvp {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
-#music-toggle {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(255,255,255,0.8);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 100;
+#invitation.visible, #gallery.visible, #rsvp.visible {
+  opacity: 1;
 }
