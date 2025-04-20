@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #333;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, #b2c9db, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+}
+
+.couple-name {
+  font-size: 3em;
+  margin: 0.2em 0;
+}
+
+.date {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.guest-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+form input, form select, form button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+}
