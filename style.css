@@ -10,7 +10,7 @@ body {
 /* Style untuk bunga yang bergerak */
 .flower {
   position: absolute;
-  background-image: url('assets/flower.png'); /* Ganti dengan path gambar bunga yang kamu punya */
+  background-image: url('assets/33dba7e4-01fe-4caf-95b1-0975676f0762.png'); /* Ganti dengan path gambar bunga yang kamu punya */
   background-size: cover;
   width: 50px;
   height: 50px;
